@@ -104,8 +104,19 @@
   #status p:nth-child(2) {
     position: absolute; top: 10px; left: 40px; 
   }
-  
+
   #status span {
     font-weight: bold;
   }
+  #high-score-container {
+    margin-top: 20px;
+    text-align: left;
+  }
   
+  #high-score-container h2 {
+    margin-bottom: 5px;
+  }
+  
+  #high-score {
+    font-weight: bold;
+  }

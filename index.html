@@ -17,11 +17,13 @@
 <!-- Quiz Screen -->
   <div id="quiz-container" style="display: none;">
     <p id="question"></p>
+
     <div id="status">
       <p>Time Left: <span id="timer">90</span> seconds</p>
       <p>Score: <span id="score">0</span></p>
-      <p>Questions Left: <span id="questions-left">10</span></p>
+      <p>Questions Left: <span id="questions-left" disabled>10</span></p>
     </div>
+
     <div id="answer-btn">
         <button class="btn">Answer 1</button>
         <button class="btn">Answer 2</button>
@@ -39,6 +41,8 @@
     <p>Your Score: <span id="final-score"></span></p>
     <input type="text" id="name-input" placeholder="Enter your name">
     <button id="submit-btn">Submit</button>
+
+    
     <div id="high-score-container" style="display: none;">
       <h2>Highest Score</h2>
       <p id="high-score"></p>

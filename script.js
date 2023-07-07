@@ -114,11 +114,11 @@ const questions = [
           },
           {
             text: "2",
-            isCorrect: false
+            isCorrect: true
           },
           {
             text: "3 ",
-            isCorrect: true
+            isCorrect: false
           },
           {
             text: "5",
@@ -213,7 +213,7 @@ const questions = [
   ];
   let currentQuestionIndex = 0;
   let score = 0;
-  let timeLeft = 60;
+  let timeLeft = 90;
   let highestScore = 10;
   let highestScorer = "Anthony";
   
@@ -236,6 +236,8 @@ const questions = [
   var finalScoreEl = document.getElementById("final-score");
   var nameInput = document.getElementById("name-input");
   var answerFeedbackEl = document.getElementById("answer-feedback");
+  var highScoreContainer = document.getElementById("high-score-container");
+  var highScoreEl = document.getElementById("high-score");
   
   // Start Button
   startBtn.addEventListener("click", startQuiz);
@@ -251,7 +253,19 @@ const questions = [
   
   
   // Submit button click event
-  submitBtn.addEventListener("click", submitScore);
+  submitBtn.addEventListener("click", function(event) {
+    event.preventDefault();
+    var playerInput = {
+      name: nameInput.value,
+      score: score
+    }
+    localStorage.setItem("playerInputStringify", JSON.stringify(playerInput));
+    localStorage.setItem("playerInput", playerInput);
+
+  renderMessage();
+
+});
+
 
   //start of the quiz
   function startQuiz() {
@@ -301,28 +315,16 @@ function resetState() {
         selectedBtn.disabled = true;
         nextBtn.style.display = "block";
     }
-    questionsLeftElement.textContent = questions.length - (currentQuestionIndex + 1);
+    questionsLeftEl.textContent = questions.length - (currentQuestionIndex + 1);
 }
 
   function endQuiz() {
     clearInterval(timerInterval);
     quizContainer.style.display = "none";
     endContainer.style.display = "block";
-    finalScoreElement.textContent = score;
-  
-    if (score > highestScore) {
-      highestScore = score;
-      highScoreElement.textContent = `${highestScore} - ${highestScorer}`;
-    }
-  
-    highScoreContainer.style.display = "block";
+    finalScoreEl.textContent = score;
+    highScoreContainer.style.display = "block"
   }
-
-  
-  function submitScore() {
-
-  }
-  
   function startTimer() {
     timerInterval = setInterval(() => {
       timeLeft--;
