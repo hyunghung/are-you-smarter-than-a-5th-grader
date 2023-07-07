@@ -11,23 +11,26 @@
     <h1>Quiz</h1>
     <h1>Are You Smarter Than A 5th Grader?</h1>
     <h2>Take a quiz to see how you are doing!</h2>
+    <h3>You have 90 seconds to complete the quiz, good luck!</h3>
     <button id="start-btn">Start</button>
   </div>
 <!-- Quiz Screen -->
   <div id="quiz-container" style="display: none;">
     <p id="question"></p>
-    <div id="answer-buttons">
+    <div id="status">
+      <p>Time Left: <span id="timer">90</span> seconds</p>
+      <p>Score: <span id="score">0</span></p>
+      <p>Questions Left: <span id="questions-left">10</span></p>
+    </div>
+    <div id="answer-btn">
         <button class="btn">Answer 1</button>
         <button class="btn">Answer 2</button>
         <button class="btn">Answer 3</button>
         <button class="btn">Answer 4</button>
     </div>
     <button id="next-btn" disabled>Next</button>
-    <div id="status">
-      <p>Time Left: <span id="timer">60</span> seconds</p>
-      <p>Score: <span id="score">0</span></p>
-      <p>Questions Left: <span id="questions-left">10</span></p>
-    </div>
+    <br></br>
+    <span id="answer-feedback"></span>
   </div>
 
   <!-- End Screen -->
