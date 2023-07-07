@@ -8,6 +8,8 @@ add your name into an input text and it is supposed to display the name along wi
 ## Image 
 
 ![image](https://github.com/hyunghung/are-you-smarter-than-a-5th-grader/assets/97567582/3313a1fe-63c9-4624-9160-d73403843696)
+![image](https://github.com/hyunghung/are-you-smarter-than-a-5th-grader/assets/97567582/d3c6f775-fb7d-46c9-85d6-3576b6da8b5d)
+
 
 ## Links 
 GitHub: https://github.com/hyunghung/are-you-smarter-than-a-5th-grader
